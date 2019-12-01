@@ -130,7 +130,7 @@ async def teasucks(ctx):
 @bot.command(pass_context=True)
 async def wwjcd(ctx):
     startTime= DT.datetime.now()
-    await ctx.send('*in a Julius Caesar voice* I, JULIUS CAESAR, conquerer of Gaul, crosser of the Rhine, basically god, have just decided to have a nice lie down, but what shall I do first ladies and gentlemen?')
+    await ctx.send('*in a Julius Caesar voice* I, JULIUS CAESAR, conquerer of Gaul, crosser of the Rhine, basically god, have just decided to have a nice sit down, but what shall I do first ladies and gentlemen?')
     time.sleep(3)
     await ctx.send('*still in a Julius Caesar voice* Oh, ladies and gentlemen, I know what I will do first, have a nice cup of tea. Infact, for a limited time only, I invite the nice ladies and gentlemen at home to have a nice cup of tea with me, be swift though ladies and gentlement, this offer won\'t last long.')
     consoleOutput('wwjcd', startTime)
