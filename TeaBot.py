@@ -1,5 +1,5 @@
-# TeaBot by Rainverm38
-# More info can be found on the GitHub here: https://github.com/Rainverm38/TeaBot
+# TeaBot by Sidpatchy
+# More info can be found on the GitHub here: https://github.com/Sidpatchy/TeaBot
 
 import discord
 from discord.ext import commands
@@ -62,7 +62,7 @@ async def help(ctx):
 @bot.command(pass_context=True)
 async def info(ctx):                             # Defines the command 'info' so to run this command you type '!info'
     startTime = DT.datetime.now()                # Stores the time the command was initiated at
-    await ctx.send('I, TeaBot, was created by Rainverm38 when he realized that there weren\'t any Discord bots dedicated to the greatest resource known to man, tea.')
+    await ctx.send('I, TeaBot, was created by Sidpatchy when he realized that there weren\'t any Discord bots dedicated to the greatest resource known to man, tea.')
     consoleOutput('info', startTime)
 
 # I hate tea command
