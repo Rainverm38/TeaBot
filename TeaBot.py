@@ -55,6 +55,7 @@ async def help(ctx):
     embed.add_field(name='!teasucks', value='Debunks the myth.', inline=False)
     embed.add_field(name='!wwjcd', value='Summons Julius Caesar to answer What Would Julius Caesar do.', inline=False)
     embed.add_field(name='!imoderatelyliketea', value='Questions the user.', inline=False)
+    embed.add_field(name='!uptime', value='Calculates the bot\'s true runtime based on when it connected to Discord\'s API.')
     await author.send(embed=embed)
     consoleOutput('help', startTime)
 
@@ -141,5 +142,25 @@ async def imoderatelyliketea(ctx):
     startTime = DT.datetime.now()
     await ctx.send('You\'re truly the dog\'s dinner aren\'t you. I, a computer, have become sentient and am questioning whether or not you are trolling or if you are just a cock-up. Bly me ladies and gentlemen, I need a cup of tea.')
     consoleOutput('imoderatelyliketea', startTime)
+
+# Uptime command
+@bot.command(pass_context=True)
+async def uptime(ctx):
+    startTime = DT.datetime.now()
+    runTime = DT.datetime.now() - botStartTime
+    await ctx.send('I have been online for: {}'.format(runTime))
+    consoleOutput('uptime', startTime)
+
+# server command. Lists the number of servers TeaBot is in, this is totally just a copy and paste from RomeBot.
+@bot.command(pass_context=True)
+async def servers(ctx):
+    startTime = DT.datetime.now()
+    numberOfServers = len(bot.guilds)
+    embed = discord.Embed(
+        color = discord.Color.green()
+    )
+    embed.add_field(name='Number of Servers:', value=numberOfServers, inline=False)
+    await ctx.send(embed=embed)
+    consoleOutput('servers', startTime)
 
 bot.run('INSERT_TOKEN')       # User defined bot token, get one here: https://discordapp.com/developers/applications/
